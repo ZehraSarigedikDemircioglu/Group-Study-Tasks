@@ -2,14 +2,14 @@ package week01;
 
 import java.util.*;
 
-public class foxPure {
+public class FoxPure {
     public String name;
     public boolean iswear;
     public boolean hasATorch;
     public String CoatColor;
     public int bag;
 
-    public foxPure(String name, boolean iswear, boolean hasATorch, String coatColor, int bag) {
+    public FoxPure(String name, boolean iswear, boolean hasATorch, String coatColor, int bag) {
         this.name = name;
         this.iswear = iswear;
         this.hasATorch = hasATorch;
@@ -57,13 +57,13 @@ public class foxPure {
         int fox2BagCount = 2;
         int fox3BagCount = 3;
         int fox4BagCount = 3;
-        foxPure fox1 = new foxPure("Fox1",true, true, "BLACK", 0);
-        foxPure fox2 = new foxPure("Fox2",true, true, "BLACK", 2);
-        foxPure fox3 = new foxPure("Fox3",true, true, "BLACK", 3);
-        foxPure fox4 = new foxPure("Fox4",false, true, "GRAY", 4);
-        List<foxPure> foxList = new ArrayList<>();
+        FoxPure fox1 = new FoxPure("Fox1",true, true, "BLACK", 0);
+        FoxPure fox2 = new FoxPure("Fox2",true, true, "BLACK", 2);
+        FoxPure fox3 = new FoxPure("Fox3",true, true, "BLACK", 3);
+        FoxPure fox4 = new FoxPure("Fox4",false, true, "GRAY", 4);
+        List<FoxPure> foxList = new ArrayList<>();
         foxList.addAll(Arrays.asList(fox1,fox2,fox3,fox4));
-        for (foxPure eachFox : foxList) {
+        for (FoxPure eachFox : foxList) {
            if (eachFox.hasATorch){
                if (eachFox.getBag()==3){
                    if (eachFox.getCoatColor().equals("BLACK")){

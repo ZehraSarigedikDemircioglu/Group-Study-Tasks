@@ -11,10 +11,10 @@ public class FakedBinary {
         String result = "";
 
         for (int i = 0; i < number.length(); i++) {
-           if (Integer.parseInt(number.charAt(i)+"")<5){
+           if (Integer.parseInt(number.charAt(i) + "") < 5){
 
-               number=number.replace((number.charAt(i)+""),"0");
-               result=number;
+               number = number.replace((number.charAt(i) + ""),"0");
+               result = number;
            }
 
         }

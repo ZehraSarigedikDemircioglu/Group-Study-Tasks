@@ -9,14 +9,19 @@ public class ConvertNumberToReversedArrayDigits {
 
     public static void main(String[] args) {
 
-        System.out.println("Enter a number ");
-        String number=new Scanner(System.in).nextLine();
-        ArrayList<Integer>arrayList=new ArrayList<>();
-        for (int i = 0; i < number.length(); i++) {
-            arrayList.add(Integer.parseInt(number.charAt(i)+""));
+        Integer input = 123;
+        String result = input.toString();
+        String[] arr = result.split("");
+        String arrResult = "";
+
+        if(input > 0) {
+            for (int i = arr.length - 1; i >= 0; i--) {
+                arrResult += arr[i];
+            }
+            System.out.println(Arrays.toString(arrResult.toCharArray()));
+        }else{
+            System.out.println(Arrays.toString(input.toString().toCharArray()));
         }
-        Collections.reverse(arrayList);
-        System.out.println(arrayList);
 
 
     }
