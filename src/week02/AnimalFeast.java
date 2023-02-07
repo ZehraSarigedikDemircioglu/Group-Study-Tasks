@@ -13,12 +13,7 @@ public class AnimalFeast {
 
     private static boolean feast(String animal, String food){
 
-
-        if(animal.charAt(0) == food.charAt(0) && animal.charAt(animal.length()-1) == food.charAt(food.length()-1)){
-            return true;
-        }else{
-            return false;
-        }
+        return animal.charAt(0) == food.charAt(0) && animal.charAt(animal.length()-1) == food.charAt(food.length()-1);
 
         /*
 

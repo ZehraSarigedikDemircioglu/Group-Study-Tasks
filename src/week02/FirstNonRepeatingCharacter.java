@@ -8,7 +8,7 @@ public class FirstNonRepeatingCharacter {
 
         for(Character ch : str.toCharArray()) {
             if(str.indexOf(ch) == str.lastIndexOf(ch)) {
-                System.out.println("First non repeat character: " + ch);
+                System.out.println("First non-repeat character: " + ch);
                 break;
             }
         }

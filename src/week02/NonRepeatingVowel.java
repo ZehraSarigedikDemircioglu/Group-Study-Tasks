@@ -11,37 +11,25 @@ public class NonRepeatingVowel {
         System.out.println(firstNonRepeatingVowel("a")); // 0
     }
 
-    public static String firstNonRepeatingVowel(String str) {
-
-        String vowel = "";
-        String unique = "";
+    public static int firstNonRepeatingVowel(String str) {
 
         for (int i = 0; i < str.length(); i++) {
-            if (str.charAt(i) == 'a' || str.charAt(i) == 'e' || str.charAt(i) == 'i'
-                    || str.charAt(i) == 'o' || str.charAt(i) == 'u') {
-                vowel += str.charAt(i);
-            }
-        }
+            if (str.charAt(i) == 'a' || str.charAt(i) == 'e' || str.charAt(i) == 'i' || str.charAt(i) == 'o' || str.charAt(i) == 'u') {
+                int vowelCount = 0;
 
-        for (int i = 0; i < vowel.length(); i++) {
-            int count = 0;
-            for (int j = 0; j < vowel.length(); j++) {
-                if (vowel.charAt(i) == vowel.charAt(j)) {
-                    count++;
+                for (int j = 0; j < str.length(); j++) {
+                    if (str.charAt(i) == str.charAt(j)) {
+                        vowelCount++;
+                    }
+                }
+                if (vowelCount == 1) {
+                    return i;
                 }
             }
-
-            if (count == 1) {
-                unique += str.indexOf(vowel.charAt(i));
-            }
         }
-        if (unique.isEmpty()) {
-            return "-1";
+            return -1;
         }
-        return unique;
     }
-}
-
 
 /*
 First Non-repeating Vowel
