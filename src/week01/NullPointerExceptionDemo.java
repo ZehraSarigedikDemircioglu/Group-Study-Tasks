@@ -1,6 +1,6 @@
 package week01;
 
-public class NullPointerException {
+public class NullPointerExceptionDemo {
 
     public static void main(String[] args) {
 
@@ -8,7 +8,7 @@ public class NullPointerException {
 
         try {
             System.out.println(str.charAt(0));
-        }catch (java.lang.NullPointerException e){
+        }catch (NullPointerException e){
             e.printStackTrace();
         }
 
