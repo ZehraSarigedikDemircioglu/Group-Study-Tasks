@@ -24,14 +24,14 @@ public class NonRepeatingVowel3 {
                 if (!map.containsKey(ch)){
                     map.put(ch, i);
                 } else {
-                    map.put(ch, -5);
+                    map.put(ch, -1);
                 }
             }
         }
         if (!map.isEmpty()){
             for (Map.Entry<Character, Integer> e : map.entrySet()) {
                 int index = e.getValue();
-                if ( index != -5){
+                if ( index != -1){
                     return index;
                 }
             }
