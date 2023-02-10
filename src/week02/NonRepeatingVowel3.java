@@ -7,11 +7,11 @@ public class NonRepeatingVowel3 {
 
     public static void main(String[] args) {
 
-        System.out.println(getIndexOfFirstNonRepeatingVowel_map("abcdabcde"));
-        System.out.println(getIndexOfFirstNonRepeatingVowel_map("abca"));
-        System.out.println(getIndexOfFirstNonRepeatingVowel_map("aabb"));
-        System.out.println(getIndexOfFirstNonRepeatingVowel_map("aabbe"));
-        System.out.println(getIndexOfFirstNonRepeatingVowel_map("a"));
+        System.out.println(getIndexOfFirstNonRepeatingVowel_map("abcdabcde")); // 8
+        System.out.println(getIndexOfFirstNonRepeatingVowel_map("abca")); // -1
+        System.out.println(getIndexOfFirstNonRepeatingVowel_map("aabb")); // -1
+        System.out.println(getIndexOfFirstNonRepeatingVowel_map("aabbe")); // 4
+        System.out.println(getIndexOfFirstNonRepeatingVowel_map("a")); // 0
 
     }
 
