@@ -1,4 +1,4 @@
-package week03.streamPractices;
+package week04;
 
 import java.util.Arrays;
 import java.util.HashMap;

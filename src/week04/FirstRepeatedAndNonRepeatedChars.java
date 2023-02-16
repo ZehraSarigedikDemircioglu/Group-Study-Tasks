@@ -1,5 +1,6 @@
-package week03.streamPractices;
+package week04;
 
+import java.util.HashMap;
 import java.util.Map;
 import java.util.LinkedHashMap;
 import java.util.Optional;
@@ -21,7 +22,7 @@ public class FirstRepeatedAndNonRepeatedChars {
 
         Map<Character, Long> map = str.chars()
                 .mapToObj(i -> (char) i)
-                .collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+                .collect(Collectors.groupingBy(Function.identity(), LinkedHashMap::new, Collectors.counting()));
 
         Optional<Character> firstNonRepeatedChar = map.entrySet().stream()
                 .filter(e -> e.getValue() == 1)
@@ -35,7 +36,7 @@ public class FirstRepeatedAndNonRepeatedChars {
 
         Map<Character, Long> map = str.chars()
                 .mapToObj(i -> (char) i)
-                .collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+                .collect(Collectors.groupingBy(Function.identity(), LinkedHashMap::new, Collectors.counting()));
 
         Optional<Character> firstRepeatedChar = map.entrySet().stream()
                 .filter(e -> e.getValue() > 1)
