@@ -28,8 +28,6 @@ public class TwoPointer {
         int rightPointer = 0;
         int leftPointer = arr.length - 1;
 
-       // int[] pair = new int[2];
-
         while (rightPointer < leftPointer) {
 
             if (arr[rightPointer] + arr[leftPointer] < target) {
@@ -38,9 +36,6 @@ public class TwoPointer {
                 leftPointer--;
             } else {
                 return new int[]{rightPointer, leftPointer};
-//                pair[0] = rightPointer;
-//                pair[1] = leftPointer;
-//                return pair;
             }
         }
         return new int[]{-1, -1};
