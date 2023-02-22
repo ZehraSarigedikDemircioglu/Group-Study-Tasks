@@ -10,19 +10,20 @@ public class ValidPalindrome {
 
     public static boolean isPalindrome(String str) {
 
-        str = str.toLowerCase();
+        String s = str.replaceAll(" ", "");
+        s = s.toLowerCase();
         int r = 0;
-        int l = str.length() - 1;
+        int l = s.length() - 1;
 
         while (r < l) {
 
-            if (str.charAt(r) > 'a' || str.charAt(l) < 'z') {
+            if (!(s.charAt(r) >= 'a' && s.charAt(l) <='z')) {
                 r++;
-            } else if (str.charAt(l) < 'a' || str.charAt(l) > 'z') {
+            } else if ((s.charAt(l) <= 'a' && s.charAt(l) >= 'z')) {
                 l--;
-//            } else if(str.charAt(r) == str.charAt(l)){
-//                r++;
-//                l--;
+            } else if(s.charAt(r) == s.charAt(l)){
+                r++;
+                l--;
             }else {
                 return false;
             }
