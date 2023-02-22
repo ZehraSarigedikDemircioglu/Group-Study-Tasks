@@ -38,7 +38,6 @@ public class TwoPointer {
                 pair[0] = rightPointer;
                 pair[1] = leftPointer;
                 return pair;
-
             }
         }
         return new int[]{-1, -1};
