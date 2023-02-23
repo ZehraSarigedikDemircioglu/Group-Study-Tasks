@@ -6,11 +6,14 @@ public class ValidPalindrome {
         System.out.println(isPalindrome("Do geese see God")); // True
         System.out.println(isPalindrome("Was it a car or a cat I saw")); // True
         System.out.println(isPalindrome("A brown fox jumping over")); // False
+        System.out.println(isPalindrome("A man, a plan, a canal: Panama")); // True
+        System.out.println(isPalindrome("race a car")); // False
     }
 
     public static boolean isPalindrome(String str) {
-
-        String s = str.replaceAll(" ", "");
+        String s = str.replaceAll(",", " ");
+        s = s.replaceAll(":", " ");
+        s = s.replaceAll(" ", "");
         s = s.toLowerCase();
         int r = 0;
         int l = s.length() - 1;
