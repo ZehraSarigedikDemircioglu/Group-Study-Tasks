@@ -7,8 +7,8 @@ public class ValidAnagramStream {
 
     public static void main(String[] args) {
 
-        System.out.println(isAnagram("rat", "car"));
-        System.out.println(isAnagram("Buckethead", "DeathCubeK"));
+        System.out.println(isAnagram("rat", "car")); // false
+        System.out.println(isAnagram("Buckethead", "DeathCubeK")); // true
 
     }
 
