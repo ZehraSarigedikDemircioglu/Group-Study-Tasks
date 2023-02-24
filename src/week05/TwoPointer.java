@@ -6,14 +6,6 @@ public class TwoPointer {
 
     public static void main(String[] args) {
 
-        // two-pointer technique is efficient. We are able to process two elements per loop instead of
-        // just one. Common patterns in the two-pointer approach entail:
-        //Two pointers, each starting from the beginning and the end until they both meet.
-        //One pointer moving at a slow pace, while the other pointer moves at twice the speed.
-
-        // The Two Pointer technique is a pattern in which two pointers iterate across
-        // the data structure until one or both of them satisfy the necessary condition.
-
         // Time Complexity:  O(n)
 
         int arr[] = {2, 3, 5, 8, 9, 10, 11};

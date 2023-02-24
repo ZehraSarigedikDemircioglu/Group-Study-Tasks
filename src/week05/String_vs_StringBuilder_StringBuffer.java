@@ -17,7 +17,7 @@ public class String_vs_StringBuilder_StringBuffer {
         System.out.println("-------------------------------------------------");
 
         StringBuffer strBuffer = new StringBuffer("Wooden");
-        strBuffer.append(" Spoon"); // StringBuffer is mutable, synchronized so slower
+        strBuffer.append(" Spoon"); // StringBuffer is mutable, thread-safe, synchronized so slower
         System.out.println(strBuffer); // create only one way by new keyword
     }
 }

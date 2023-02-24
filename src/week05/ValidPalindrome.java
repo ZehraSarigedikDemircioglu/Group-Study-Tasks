@@ -10,7 +10,7 @@ public class ValidPalindrome {
         System.out.println(isPalindrome("race a car")); // False
     }
 
-    public static boolean isPalindrome(String str) {
+    public static boolean isPalindrome(String str) { //replaceAll("[a-z0-9]", "")
         String s = str.replaceAll(",", " ");
         s = s.replaceAll(":", " ");
         s = s.replaceAll(" ", "");
