@@ -9,8 +9,8 @@ public class ArrayFrequencyWithWord {
 
         int[] arr = {1, 2, 3, 4, 3, 2, 1, 3, 2, 2, 2, 4};
         int[] arr2 = {1, 2, 3, 4, 3, 2, 1, 3, 2, 2, 2, 4, 2, 2, 2, 2, 2, 2};
-        System.out.println(frequencyWithWord(arr));
-        System.out.println(frequencyWithWord(arr2));
+        System.out.println(frequencyWithWord(arr)); // {1=two, 2=five, 3=three, 4=two}
+        System.out.println(frequencyWithWord(arr2)); // {1=two, 2=more than ten, 3=three, 4=two}
     }
 
     public static Map<Integer, String> frequencyWithWord(int[] array) {
