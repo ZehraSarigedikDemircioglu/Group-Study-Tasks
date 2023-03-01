@@ -25,9 +25,9 @@ public class MissingNumber {
 
         int sumOfArray = n * (n + 1) / 2;
 
-        if(result==sumOfArray){
+        if (result == sumOfArray) {
             return 0;
-        }else{
+        } else {
             return sumOfArray - result;
         }
     }
