@@ -1,7 +1,9 @@
 package week06;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class ArrayFrequencyWithWord {
 
@@ -18,7 +20,6 @@ public class ArrayFrequencyWithWord {
         Map<Integer, String> map = new HashMap<>();
         String[] words = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "more than ten"};
 
-
         for (int each : array) {
 
             int count = 0;
@@ -28,7 +29,6 @@ public class ArrayFrequencyWithWord {
                     count++;
                 }
             }
-
             if (count > 10) {
                 map.put(each, words[11]);
             } else {
