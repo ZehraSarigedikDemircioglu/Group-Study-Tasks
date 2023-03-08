@@ -11,13 +11,15 @@ public class RemoveDuplicatesFromSortedArray {
 
         System.out.println(Arrays.toString(removeDuplicates(nums))); // [1, 2]
         System.out.println(Arrays.toString(removeDuplicates(nums2))); // [0, 1, 2, 3, 4]
+        removeDuplicates2(nums); // [1, 2]
+        removeDuplicates2(nums2); // [0, 1, 2, 3, 4]
     }
     public static int[] removeDuplicates(int[] array) {
         return Arrays.stream(array).distinct().toArray();
     }
-    /*public static int removeDuplicates(int[] array) {
-        return Arrays.stream(array).distinct().toArray();
-    }*/
+    public static void removeDuplicates2(int[] array) {
+        Arrays.stream(array).distinct().forEach(System.out::println);
+    }
 }
 /*
 Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each
