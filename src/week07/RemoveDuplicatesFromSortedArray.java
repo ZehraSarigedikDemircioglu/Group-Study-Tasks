@@ -1,6 +1,6 @@
 package week07;
 
-import java.util.Arrays;
+import java.util.*;
 
 public class RemoveDuplicatesFromSortedArray {
 
@@ -9,17 +9,57 @@ public class RemoveDuplicatesFromSortedArray {
         int[] nums = {1, 1, 2};
         int[] nums2 = {0, 0, 1, 1, 1, 2, 2, 3, 3, 4};
 
-        System.out.println(Arrays.toString(removeDuplicates(nums))); // [1, 2]
-        System.out.println(Arrays.toString(removeDuplicates(nums2))); // [0, 1, 2, 3, 4]
+        System.out.println(removeDuplicates(nums)); // 2
+        System.out.println(removeDuplicates(nums2)); // 5
+
+        System.out.println("---------------------------------------------------");
+
         removeDuplicates2(nums); // [1, 2]
         removeDuplicates2(nums2); // [0, 1, 2, 3, 4]
+
+        System.out.println("---------------------------------------------------");
+
+        System.out.println(removeDuplicates3(nums)); // 2
+        System.out.println(removeDuplicates3(nums2)); // 5
+
+        System.out.println("---------------------------------------------------");
+
+        System.out.println(removeDuplicates4(nums)); // 2
+        System.out.println(removeDuplicates4(nums2)); // 5
     }
-    public static int[] removeDuplicates(int[] array) {
-        return Arrays.stream(array).distinct().toArray();
+
+    public static int removeDuplicates(int[] array) {
+        return Arrays.stream(array).distinct().toArray().length;
     }
+
     public static void removeDuplicates2(int[] array) {
         Arrays.stream(array).distinct().forEach(System.out::println);
     }
+
+    public static int removeDuplicates3(int[] array) {
+
+        Set<Integer> set = new HashSet<>();
+
+        for (int each : array) {
+            set.add(each);
+        }
+
+        return set.size();
+    }
+
+    public static int removeDuplicates4(int[] array) {
+
+        int j = 1;
+
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] != array[i - 1]) {
+                array[j] = array[i];
+                j++;
+            }
+        }
+        return j;
+    }
+
 }
 /*
 Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each
