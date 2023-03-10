@@ -22,13 +22,6 @@ public class MoveZeroes {
     public static int[] moveZerosToTheEnd(int[] array) {
 
         int count = 0;
-
-//        for (int each : array) {
-//            if (each != 0) {
-//                array[count++] = each;
-//            }
-//        }
-
         for (int i = 0; i < array.length; i++) {
             if(array[i] !=0){
                 array[count++] = array[i];
