@@ -53,7 +53,7 @@ public class LengthOfLastWord {
         }
 
         String result = s.trim();
-        result = result.substring(result.lastIndexOf(" ") + 1, result.length());
+        result = result.substring(result.lastIndexOf(" ") + 1);
         return result.length();
     }
 }
