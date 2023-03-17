@@ -1,7 +1,6 @@
 package week08;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class TheAnimalsWentTwoByTwo {
 
@@ -18,6 +17,13 @@ public class TheAnimalsWentTwoByTwo {
         System.out.println(pairAnimals(s4)); // {cat=2, dog=2}
         System.out.println(pairAnimals(s5)); // {horse=2, rabbit=2, goat=2}
 
+        List<String> list = new ArrayList<>();
+        List<String> list2 = new ArrayList<>(Arrays.asList( "goat", "goat", "rabbit", "rabbit", "rabbit", "duck", "horse", "horse", "swan"));
+        System.out.println(pairAnimals2(list));//{}
+        System.out.println(pairAnimals2(list2));//{horse=2, rabbit=2, goat=2}
+
+
+
     }
 
     public static Map<String, Integer> pairAnimals(String[] array) {
@@ -27,6 +33,24 @@ public class TheAnimalsWentTwoByTwo {
             return map;
         }
         for (String each : array) {
+            if (map.containsKey(each)) {
+                map.put(each, 2);
+            } else {
+                map.put(each, 1);
+            }
+        }
+
+        map.entrySet().removeIf(entry -> entry.getValue() == 1);
+        return map;
+    }
+
+    public static Map<String, Integer> pairAnimals2(List<String> list) {
+
+        Map<String, Integer> map = new HashMap<>();
+        if (list.size() == 0 || list.size() == 1) {
+            return map;
+        }
+        for (String each : list) {
             if (map.containsKey(each)) {
                 map.put(each, 2);
             } else {
