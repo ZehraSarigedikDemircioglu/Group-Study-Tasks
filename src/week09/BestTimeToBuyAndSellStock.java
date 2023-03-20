@@ -1,8 +1,5 @@
 package week09;
 
-import static java.lang.Math.max;
-import static java.lang.Math.min;
-
 public class BestTimeToBuyAndSellStock {
 
     public static void main(String[] args) {
