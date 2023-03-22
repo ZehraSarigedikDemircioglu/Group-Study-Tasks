@@ -25,6 +25,7 @@ public class QueuePractice {
         queue1.peek();
 
         System.out.println(queue1); // [2, 3, 2, 4, 5, 3, 5, 4]
+//        queue1.offer(10); // like put method but random order
 
         queue1.poll();
         queue1.poll();
