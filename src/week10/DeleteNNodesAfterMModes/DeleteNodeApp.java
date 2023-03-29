@@ -23,6 +23,6 @@ public class DeleteNodeApp {
 
         list2.printNodes(); // 1=> 2=> 3=> 4=> 5=> 6=> 7=> 8=> 9=> 10=> 11=> null
         list2.deleteNNodesAfterMModes(1, 3);
-        list2.printNodes(); // 1=> 2=> 6=> 7=> 11=> 12=> null
+        list2.printNodes(); // 1=> 5=> 9=> null
     }
 }
