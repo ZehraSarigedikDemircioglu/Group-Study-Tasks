@@ -15,7 +15,9 @@ public class SingleNumber {
         System.out.println(singleNumber(nums2)); // 4
         System.out.println(singleNumber(nums3)); // 1
 
-
+        System.out.println(singleNumber2(nums)); // 1
+        System.out.println(singleNumber2(nums2)); // 4
+        System.out.println(singleNumber2(nums3)); // 1
     }
 
     public static int singleNumber(int[] nums) {
@@ -28,6 +30,15 @@ public class SingleNumber {
             }
         }
         return set.stream().findAny().orElseThrow();
+    }
+
+    public static int singleNumber2(int[] nums) {
+
+        int result = 0;
+        for (int i : nums) {
+            result ^= i;
+        }
+        return result;
     }
 }
 /*
