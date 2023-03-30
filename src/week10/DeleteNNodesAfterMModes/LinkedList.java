@@ -10,9 +10,9 @@ public class LinkedList {
         return head == null;
     }
 
-    void add(int data) {
+    void add(Node node) {
 
-        Node node = new Node(data);
+//        Node node = new Node(data);
 
         if (isEmpty()) {
             head = tail = node;
