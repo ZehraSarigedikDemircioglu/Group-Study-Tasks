@@ -8,7 +8,7 @@ public class DeleteNodeApp {
         LinkedList list = new LinkedList();
 
         for (int i = 1; i <= 13 ; i++) {
-            list.add(i);
+            list.add(new Node(i));
         }
 
         list.printNodes(); // 1=> 2=> 3=> 4=> 5=> 6=> 7=> 8=> 9=> 10=> 11=> 12=> 13=> null
@@ -18,7 +18,7 @@ public class DeleteNodeApp {
         LinkedList list2 = new LinkedList();
 
         for (int i = 1; i <= 11 ; i++) {
-            list2.add(i);
+            list2.add(new Node(i));
         }
 
         list2.printNodes(); // 1=> 2=> 3=> 4=> 5=> 6=> 7=> 8=> 9=> 10=> 11=> null
