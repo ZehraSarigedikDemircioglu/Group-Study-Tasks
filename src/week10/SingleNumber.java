@@ -10,14 +10,17 @@ public class SingleNumber {
         int[] nums = {2, 2, 1};
         int[] nums2 = {4, 1, 2, 1, 2};
         int[] nums3 = {1};
+        int[] nums4 = {1, 2, 1, 2};
 
         System.out.println(singleNumber(nums)); // 1
         System.out.println(singleNumber(nums2)); // 4
         System.out.println(singleNumber(nums3)); // 1
+        System.out.println(singleNumber(nums4)); // No value present
 
         System.out.println(singleNumber2(nums)); // 1
         System.out.println(singleNumber2(nums2)); // 4
         System.out.println(singleNumber2(nums3)); // 1
+
     }
 
     public static int singleNumber(int[] nums) {
