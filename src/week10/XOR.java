@@ -7,7 +7,7 @@ public class XOR {
         int x = 5;
         int y = 3;
 
-        // |3 + 5 - 2 x 3 x 5|= 22 => 2x2^0+2x2^1 = 6
+        // |3 + 5 - 2 x 3 x 5|= 22 => 2 x 2 ^ 0 + 2 x 2 ^ 1 = 6
 
         System.out.println(x ^ y); // 6
 
