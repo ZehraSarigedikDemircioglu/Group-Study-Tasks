@@ -36,14 +36,14 @@ public class LinkedList {
         }
     }
 
-    void deleteNNodesAfterMModes(int n, int m) {
+    void deleteNNodesAfterMModes(int m, int n) {
 
         Node prev = head;
         Node current = head;
 
         while (current != null) {
 
-            for (int i = 1; i <= m; i++) { // skip m nodes
+            for (int i = 1; i <= n; i++) { // go n-times
                 prev = current;
                 current = current.next;
             }
@@ -51,9 +51,9 @@ public class LinkedList {
             if (current == null) {
                 return;
             }
-            for (int i = 1; i <= n; i++) { // to remove n-times
+            for (int i = 1; i <= m; i++) { // to remove m-times
                 prev.next = current.next;
-                current.next = current.next;
+                current = current.next;
                 size--;
             }
         }
