@@ -1,5 +1,7 @@
 package week13;
 
+import java.util.Deque;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Stack;
 
@@ -21,6 +23,7 @@ public class FindAllElementsGreaterThanTheirRight {
     public static List<Integer> find(int[] arr) {
 
         Stack<Integer> stack = new Stack<>();
+//        Deque<Integer> stack = new LinkedList<>();
 
         for (int each : arr) {
             while (!stack.isEmpty() && stack.peek() < each) {
