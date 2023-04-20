@@ -33,17 +33,13 @@ public class FindAllElementsGreaterThanTheirRight {
 
     public static void find2(int[] arr) {
 
-        if (arr == null || arr.length == 0) {
-            return;
-        }
-
         for (int i = 0; i < arr.length; i++) {
             for (int j = i + 1; j < arr.length; j++) {
 
                 if (arr[j] > arr[i]) {
                     break;
                 }
-                if (j == arr.length - 1) { //  //if 'j' reached to last index, that means array[i] is greater than all elements to its right, so print array[i]
+                if (j == arr.length - 1) { // if 'j' reached to last index, that means array[i] is greater than all elements to its right, so print array[i]
                     System.out.print(arr[i] + " ");
                 }
             }
