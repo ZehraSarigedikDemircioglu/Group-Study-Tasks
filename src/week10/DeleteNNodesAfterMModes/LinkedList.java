@@ -38,24 +38,28 @@ public class LinkedList {
 
     void deleteNNodesAfterMModes(int m, int n) {
 
-        Node prev = head;
+        // Keep the first m nodes starting with the current node.
+        // Remove the next n nodes
+
         Node current = head;
+        Node lastM = head;
 
         while (current != null) {
 
-            for (int i = 1; i <= n; i++) { // go n-times
-                prev = current;
+            int mCount = m, nCount = n;
+
+            while (current != null && mCount != 0) { // traverse m nodes
+                lastM = current;
                 current = current.next;
+                mCount--;
             }
 
-            if (current == null) {
-                return;
-            }
-            for (int i = 1; i <= m; i++) { // to remove m-times
-                prev.next = current.next;
+            while (current != null && nCount != 0) { // traverse n nodes
                 current = current.next;
-                size--;
+                nCount--;
             }
+            lastM.next = current; // delete n nodes
         }
+        System.out.println(head);
     }
 }
