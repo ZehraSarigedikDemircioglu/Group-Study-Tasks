@@ -12,9 +12,11 @@ public class FindAllElementsGreaterThanTheirRight {
         int[] arr = {10, 4, 6, 3, 5};
         int[] arr2 = {2, 4, 6, 3};
         int[] arr3 = {2, 4, 6};
+        int[] arr4 = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 11};
         System.out.println(find(arr)); // [10, 6, 5]
         System.out.println(find(arr2)); // [6, 3]
         System.out.println(find(arr3)); // [6]
+        System.out.println(find(arr4)); // [11]
 
         find2(arr); // 10 6 5
 
