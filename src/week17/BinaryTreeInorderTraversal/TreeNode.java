@@ -1,7 +1,6 @@
 package week17.BinaryTreeInorderTraversal;
 
 public class TreeNode {
-
     int val;
     TreeNode left;
     TreeNode right;
