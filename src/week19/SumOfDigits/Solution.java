@@ -9,7 +9,6 @@ public class Solution {
         System.out.println(sumDigits(132189)); // 6
         System.out.println(sumDigits(493193)); // 2
     }
-
     public static int sumDigits(int num) {
 
         int sum = 0;
